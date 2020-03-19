@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff;
+  overflow-y: scroll;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: -1;
+}
+
+.content {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  max-width: 1000px;
+  margin: auto;
+  background: white;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 2000px;
+  height: 100vh;
+}
+
+.navbar {
+  position: fixed;
+  background-color: #ffff;
+  overflow: hidden;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.navbar #name-button {
+  color: #61bd46;
+  font-size: 24pt;
+  padding: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  font-family: "Space Mono", monospace;
+}
+
+.navbar .nav-link {
+  float: right;
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 20px;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar .nav-link:hover {
+  text-decoration: underline;
+  color: #0072bb;
+  font-weight: bold;
+}
+
+.button {
+  background-color: #ffffff;
+  border: solid;
+  border-color: #61bd46;
+  color: #61bd46;
+  padding: 15px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.button:hover {
+  background: #0072bb;
+  color: #ffffff;
+  border: #0072bb;
+}
+
+#intro {
+  font-size: 72px;
+  text-align: center;
+}
+
+.important-text {
+  color: #61bd46;
+}
+
+#about {
+  padding: 30px;
+}
+
+#about h1 {
+  font-family: "Space Mono", monospace;
+  font-size: 64px;
+  color: #61bd46;
+}
+
+#about p {
+  padding: 10px;
+  font-size: 36px;
+}
+
+#about hr {
+  border: 3px solid;
+  width: 50%;
+  margin: 10px;
+  color: #61bd46;
+}
+
+#work h1 {
+  font-family: "Space Mono", monospace;
+  font-size: 64px;
+  color: #61bd46;
+}
+
+#work .img-area {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#work .grid-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+
+#work .work-img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#work .work-img {
+  margin: 10px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#work hr {
+  border: 3px solid;
+  width: 50%;
+  margin: 10px;
+  color: #61bd46;
+}
+
+#contact .container-form {
+  width: 500px;
+  clear: both;
+}
+
+#contact .container-form input {
+  width: 100%;
+  clear: both;
+}
+
+#contact h1 {
+  font-family: "Space Mono", monospace;
+  color: #61bd46;
+  font-size: 64px;
+}
+
+#contact hr {
+  border: 3px solid;
+  width: 50%;
+  margin: 10px;
+  color: #61bd46;
+}
+
+form {
+  width: 100%;
+}
+
+form .form-controlcontact {
+  width: 100%;
+  border: none;
+  border-bottom: 2px #61bd46;
+  background: #eeeeee;
+  color: black;
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+form .form-controlcontact-submit {
+  width: 100%;
+  background-color: #ffffff;
+  color: #61bd46;
+  font-size: 24px;
+  border: solid;
+  border-color: #61bd46;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+form .form-controlcontact-submit:hover {
+  color: #ffffff;
+  background-color: #0072bb;
+  border: #0072bb solid;
+}
+
+form textarea {
+  resize: none;
+  width: 100%;
+  height: 200px;
+}
+/*# sourceMappingURL=main.css.map */
