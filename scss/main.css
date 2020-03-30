@@ -10,12 +10,9 @@ body {
   overflow-y: scroll;
 }
 
-.wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
+/*.wrapper {
   display: flex;
-}
-
+}*/
 .content {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -51,7 +48,7 @@ section {
           justify-content: center;
   max-width: 100vw;
   height: 100vh;
-  padding: 10px;
+  margin: 10px;
 }
 
 .navbar {
@@ -335,5 +332,12 @@ form textarea {
   resize: none;
   width: 100%;
   height: 200px;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  background: orange;
+  color: black;
 }
 /*# sourceMappingURL=main.css.map */
