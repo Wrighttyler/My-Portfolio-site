@@ -3,8 +3,8 @@
 $primary-color: #38618c;
 $secondary-color: #fb4d3d;
 $text-color: #0000;
-$heading-font: "Space Mono", monospace;
-$content-font: "Montserrat", sans-serif;
+$heading-font: 'Open Sans', sans-serif;
+$content-font: "Poppins", sans-serif;
 //------------------------------------------------------------------DEFAULT STYLES-------------------------------------------------
 
 * {
@@ -16,6 +16,7 @@ $content-font: "Montserrat", sans-serif;
 
 body {
   overflow-y: scroll;
+  font-family: $content-font;
 }
 .wrapper {
   background: lightgray;
@@ -58,12 +59,11 @@ section {
   z-index: 1;
   width: 100%;
   .name-button {
-    color: $secondary-color;
-    font-size: 2rem;
-    padding: 25px;
-    text-decoration: none;
-    font-weight: 500;
-    font-family: $heading-font;
+   img{
+     height: 3%;
+     width: 3%;
+     margin-left: 10px;
+   }
   }
 
   .nav-link {
