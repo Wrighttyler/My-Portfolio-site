@@ -2,8 +2,9 @@
 
 $primary-color: #38618c;
 $secondary-color: #fb4d3d;
-$text-color: #0000;
-$heading-font: 'Open Sans', sans-serif;
+$black: #000;
+$white: #fff;
+$heading-font: "Open Sans", sans-serif;
 $content-font: "Poppins", sans-serif;
 //------------------------------------------------------------------DEFAULT STYLES-------------------------------------------------
 
@@ -19,16 +20,15 @@ body {
   font-family: $content-font;
 }
 .wrapper {
-  
   display: flex;
   flex-direction: column;
 }
 .content {
   align-self: center;
   max-width: 80%;
-  color: black;
+  color: $black;
   font-family: $content-font;
-  background: white;
+  background: $white;
 }
 
 .heading {
@@ -59,11 +59,11 @@ section {
   z-index: 1;
   width: 100%;
   .name-button {
-   img{
-     height: 3%;
-     width: 3%;
-     margin-left: 10px;
-   }
+    img {
+      height: 3%;
+      width: 3%;
+      margin-left: 10px;
+    }
   }
 
   .nav-link {
@@ -78,7 +78,7 @@ section {
   }
   .nav-link:hover {
     background: $secondary-color;
-    color: #ffffff;
+    color: $white;
     font-weight: bold;
   }
   .icon {
@@ -110,7 +110,7 @@ section {
 
 @media screen and (max-width: 920px) {
   .navbar.responsive {
-    position: relative;
+    position: fixed;
   }
   .navbar.responsive a.icon {
     padding: 10px;
@@ -124,25 +124,17 @@ section {
   }
   .navbar.responsive a:not(#name-button):not(.icon):hover {
     background-color: $secondary-color;
-    color: #ffffff;
-  }
-}
-
-@media screen and (max-width: 920px) {
-  .name-button {
-    color: pink;
+    color: $white;
   }
 }
 
 //------------------------------------------------------------------INTRO-------------------------------------------------
 
 #intro {
-
   font-size: 2rem;
   text-align: center;
   height: 100vh;
   margin: 0;
-
 }
 
 .important-text {
@@ -153,7 +145,7 @@ section {
   background-color: $primary-color;
   border: solid;
   border-color: $primary-color;
-  color: #ffffff;
+  color: $white;
   padding: 15px;
   font-family: $content-font;
   text-align: center;
@@ -163,7 +155,7 @@ section {
 }
 .button:hover {
   background: $secondary-color;
-  color: #ffffff;
+  color: $white;
   border: solid $secondary-color;
 }
 
@@ -235,7 +227,7 @@ section {
   .cards {
     display: grid;
     margin: 10px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-gap: 1rem;
   }
@@ -267,7 +259,7 @@ section {
   .card-button {
     background-color: $primary-color;
     border: solid $primary-color;
-    color: #ffffff;
+    color: $white;
     padding: 5px;
     font-family: $content-font;
     text-align: center;
@@ -296,7 +288,7 @@ section {
 }
 //------------------------------------------------------------------CONTACT-------------------------------------------------
 #contact {
-    height: 100vh;
+  height: 100vh;
   .container-form {
     width: 75%;
     clear: both;
@@ -335,7 +327,7 @@ form {
   .form-controlcontact-submit {
     width: 100%;
     background-color: $primary-color;
-    color: #ffffff;
+    color: $white;
     font-size: 1rem;
     font-family: $content-font;
     border: solid;
@@ -344,7 +336,7 @@ form {
     margin: 0 auto;
   }
   .form-controlcontact-submit:hover {
-    color: #ffffff;
+    color: $white;
     background-color: $secondary-color;
     border: $secondary-color solid;
   }
@@ -362,77 +354,72 @@ form {
   color: black;
 }
 
-.footer-container{
+.footer-container {
+  font-family: $content-font;
+  margin: 0 auto;
+  display: grid;
+  max-width: 80%;
+  align-content: center;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer-item1 {
+  display: flex;
+  flex-direction: column;
+  font-family: $content-font;
+  font-size: 0.75rem;
+  margin: 10px;
+  .footer-link {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+.footer-item2 {
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+
+  padding: 10px;
+  font-size: 0.75em;
+  color: #fff;
+}
+.footer-item3 {
+  color: #fff;
+  i {
+    text-align: center;
+  }
+  hr {
+    width: 60%;
+    margin: 0 auto;
+    height: 1px;
+    color: $secondary-color;
+    border: solid;
+  }
+
+  .footer-icons {
+    text-align: center;
+  }
+  .fa-linkedin {
+    color: $secondary-color;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .fa-dribbble-square {
+    color: $secondary-color;
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 920px) {
+  .footer-container {
     font-family: $content-font;
     margin: 0 auto;
     display: grid;
     max-width: 80%;
     align-content: center;
     justify-items: center;
-    grid-template-columns: repeat(3,1fr);
-  
-}
-
-.footer-item1{
-    display: flex;
-    flex-direction: column;
-    font-family: $content-font;
-    font-size: 0.75rem;
-    margin: 10px;
-   .footer-link{
-       text-decoration: none;
-       color: #fff;
-   }
-}
-.footer-item2{
-    display: flex;
-    align-items: flex-end;
-   text-align: center;
-   
-    padding: 10px;
-    font-size: 0.75em;
-    color: #fff;
-}
-.footer-item3{
-   color: #fff;
-i{
-    text-align: center;
-}
-   hr{
-       width: 60%;
-       margin: 0 auto;
-       height: 1px;
-       color: $secondary-color;
-       border: solid;
-   }
-
-   .footer-icons{
-       text-align: center;
-   }
-.fa-linkedin{
-    color: $secondary-color;
-    font-size: 2rem;
-    text-align: center;
-   
-}
-
-.fa-dribbble-square{
-    color: $secondary-color;
-    font-size: 2rem;
-    text-align: center;
-     
-}
-
-}
-@media screen and (max-width:920px){
-    .footer-container{
-        font-family: $content-font;
-        margin: 0 auto;
-        display: grid;
-        max-width: 80%;
-        align-content: center;
-        justify-items: center;
-        grid-template-columns: 1fr;
-      
-    }
+    grid-template-columns: 1fr;
+  }
 }
