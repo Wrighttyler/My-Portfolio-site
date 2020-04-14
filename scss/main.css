@@ -12,7 +12,6 @@ body {
 }
 
 .wrapper {
-  background: lightgray;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
