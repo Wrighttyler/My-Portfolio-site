@@ -25,7 +25,7 @@ body {
 }
 .content {
   align-self: center;
-  max-width: 80%;
+  max-width: 75%;
   color: $black;
   font-family: $content-font;
   background: $white;
@@ -211,6 +211,8 @@ section {
 
 //------------------------------------------------------------------WORK-------------------------------------------------
 #work {
+  width: 80vw;
+  margin: 0 auto;
   padding-top: 5vh;
   h1 {
     font-family: $heading-font;
@@ -423,3 +425,8 @@ form {
     grid-template-columns: 1fr;
   }
 }
+
+
+
+
+//--------------------PigGame Styling-------------------------------------
