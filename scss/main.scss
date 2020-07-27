@@ -1,7 +1,9 @@
 //------------------------------------------------------------------VARIABLES-------------------------------------------------
 
-$primary-color: #38618c;
-$secondary-color: #fb4d3d;
+$primary-color: #0a0a0a;
+$secondary-color: #ff5d73;
+$tertiary-color: #2c2c34;
+$accent-color: #ff5d73;
 $black: #000;
 $white: #fff;
 $heading-font: "Open Sans", sans-serif;
@@ -14,10 +16,23 @@ $content-font: "Poppins", sans-serif;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $secondary-color;
+}
 
 body {
   overflow-y: scroll;
   font-family: $content-font;
+
+  color: white;
 }
 .wrapper {
   display: flex;
@@ -26,7 +41,7 @@ body {
 .content {
   align-self: center;
   max-width: 75%;
-  color: $black;
+  color: $white;
   font-family: $content-font;
   background: $white;
 }
@@ -47,22 +62,27 @@ section {
   justify-content: center;
   max-width: 100vw;
   height: 100%;
+margin-bottom: 20%;
+}
+
+.line {
+  border-bottom: 5px solid $secondary-color;
+  width: 30%;
   margin: 10px;
 }
 
 //------------------------------------------------------------------NAV-------------------------------------------------
 .navbar {
-  position:fixed ;
-  background-color: #f8f8f8;
+  position: fixed;
+  background-color: transparent;
   overflow: hidden;
-  top: 0;
   z-index: 1;
   width: 100%;
   .name-button {
     img {
       height: 3%;
       width: 3%;
-      margin-left: 10px;
+      margin: 10px;
     }
   }
 
@@ -71,14 +91,12 @@ section {
     text-align: center;
     align-content: center;
     padding: 15px;
-    color: $primary-color;
-    font-family: $content-font;
+    color: $secondary-color;
     text-decoration: none;
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
   .nav-link:hover {
-    background: $secondary-color;
-    color: $white;
+    color: $secondary-color;
     font-weight: bold;
   }
   .icon {
@@ -91,6 +109,7 @@ section {
     font-size: 2rem;
   }
 }
+
 @media screen and (max-width: 920px) {
   .navbar a:not(:first-child) {
     display: none;
@@ -100,11 +119,14 @@ section {
     display: block;
     text-align: center;
     align-content: center;
-    color: $primary-color;
+    color: $secondary-color;
   }
-  .navbar #name-button {
-    font-size: 2rem;
-    align-items: center;
+  .navbar .name-button {
+    img {
+      height: 32px;
+      width: 32px;
+      margin: 10px;
+    }
   }
 }
 
@@ -120,66 +142,115 @@ section {
     float: none;
     display: block;
     text-align: left;
-    color: $primary-color;
-  }
-  .navbar.responsive a:not(#name-button):not(.icon):hover {
-    background-color: $secondary-color;
-    color: $white;
+    color: $secondary-color;
   }
 }
 
 //------------------------------------------------------------------INTRO-------------------------------------------------
 
 #intro {
-  font-size: 2rem;
   text-align: center;
   height: 100vh;
-  margin: 0;
-}
-
-.important-text {
-  color: $primary-color;
-}
-
-.button {
-  background-color: $primary-color;
-  border: solid;
-  border-color: $primary-color;
+  
+  background: $primary-color;
   color: $white;
-  padding: 15px;
-  font-family: $content-font;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1rem;
-}
-.button:hover {
-  background: $secondary-color;
-  color: $white;
-  border: solid $secondary-color;
+  
+
+  .intro {
+    width: 80%;
+  }
+
+  .intro-text {
+    width: 40%;
+   margin: 0 auto;
+    text-align: center;
+   
+  }
+  .line{
+    margin: 20px auto;
+    padding-bottom: 30px;
+    border-top: 5px solid $secondary-color;
+    border-bottom: none;
+  }
+  .important-text {
+    color: $secondary-color;
+  }
+  
+
+  .button {
+    margin: 20px;
+    background-color: $primary-color;
+    border: solid 3px $white;
+    color: $white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  .button:hover {
+    background: $secondary-color;
+    color: $white;
+    border: solid $secondary-color;
+
+    .arrow {
+      transform: rotate(90deg);
+      transition-timing-function: ease-in;
+    }
+  }
+
+  .arrow {
+    margin-left: 10px;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  @media screen and (max-width: 920px) {
+    .intro-text {
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+    }
+    .line {
+      margin: 0 auto;
+      padding: 30px;
+      border-top: 5px solid $secondary-color;
+    }
+    .button {
+      float: none;
+      margin: 10px;
+    }
+  }
 }
 
 //------------------------------------------------------------------ABOUT-------------------------------------------------
 #about {
   height: 100vh;
-  .headshot-image {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+ 
+
+  .about {
+    img {
+      width: 100px;
+      height: aut;
+    }
+    .headshot-image {
+      width: 100%;
+      height: auto;
+      display: none;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   h1 {
     font-family: $heading-font;
     font-size: 2.25rem;
-    color: $primary-color;
+    color: black;
   }
 
   p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     text-align: center;
-    width: 80%;
+    width: 50%;
+    color: black;
   }
   hr {
     border: 3px solid;
@@ -197,7 +268,6 @@ section {
 
   @media screen and (max-width: 920px) {
     h1 {
-      font-family: $heading-font;
       font-size: 2rem;
       color: $primary-color;
     }
@@ -211,9 +281,6 @@ section {
 
 //------------------------------------------------------------------WORK-------------------------------------------------
 #work {
-  width: 80vw;
-  margin: 0 auto;
-  padding-top: 5vh;
   h1 {
     font-family: $heading-font;
     font-size: 2.25rem;
@@ -232,6 +299,8 @@ section {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-gap: 1rem;
+    width: 50%;
+    height: 50%;
   }
 
   .card {
@@ -263,7 +332,6 @@ section {
     border: solid $primary-color;
     color: $white;
     padding: 5px;
-    font-family: $content-font;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -331,7 +399,6 @@ form {
     background-color: $primary-color;
     color: $white;
     font-size: 1rem;
-    font-family: $content-font;
     border: solid;
     border-color: $primary-color;
     padding: 20px;
@@ -347,6 +414,9 @@ form {
     width: 100%;
     height: 200px;
   }
+  input {
+    border-radius: 5px;
+  }
 }
 
 .footer {
@@ -357,7 +427,6 @@ form {
 }
 
 .footer-container {
-  font-family: $content-font;
   margin: 0 auto;
   display: grid;
   max-width: 80%;
@@ -401,6 +470,7 @@ form {
 
   .footer-icons {
     text-align: center;
+    padding-bottom: 5%;
   }
   .fa-linkedin {
     color: $secondary-color;
@@ -417,9 +487,10 @@ form {
 @media screen and (max-width: 920px) {
   .footer-container {
     font-family: $content-font;
+    background: $primary-color;
     margin: 0 auto;
     display: grid;
-    max-width: 80%;
+    max-width: 100%;
     align-content: center;
     justify-items: center;
     grid-template-columns: 1fr;
@@ -427,6 +498,3 @@ form {
 }
 
 
-
-
-//--------------------PigGame Styling-------------------------------------

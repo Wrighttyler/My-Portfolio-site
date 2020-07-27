@@ -6,9 +6,20 @@
   scroll-behavior: smooth;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ff5d73;
+}
+
 body {
   overflow-y: scroll;
   font-family: "Poppins", sans-serif;
+  color: white;
 }
 
 .wrapper {
@@ -26,7 +37,7 @@ body {
       -ms-grid-row-align: center;
       align-self: center;
   max-width: 75%;
-  color: #000;
+  color: #fff;
   font-family: "Poppins", sans-serif;
   background: #fff;
 }
@@ -56,14 +67,19 @@ section {
           justify-content: center;
   max-width: 100vw;
   height: 100%;
+  margin-bottom: 20%;
+}
+
+.line {
+  border-bottom: 5px solid #ff5d73;
+  width: 30%;
   margin: 10px;
 }
 
 .navbar {
   position: fixed;
-  background-color: #f8f8f8;
+  background-color: transparent;
   overflow: hidden;
-  top: 0;
   z-index: 1;
   width: 100%;
 }
@@ -71,7 +87,7 @@ section {
 .navbar .name-button img {
   height: 3%;
   width: 3%;
-  margin-left: 10px;
+  margin: 10px;
 }
 
 .navbar .nav-link {
@@ -80,15 +96,13 @@ section {
   -ms-flex-line-pack: center;
       align-content: center;
   padding: 15px;
-  color: #38618c;
-  font-family: "Poppins", sans-serif;
+  color: #ff5d73;
   text-decoration: none;
-  font-size: 1.125rem;
+  font-size: 1rem;
 }
 
 .navbar .nav-link:hover {
-  background: #fb4d3d;
-  color: #fff;
+  color: #ff5d73;
   font-weight: bold;
 }
 
@@ -112,13 +126,12 @@ section {
     text-align: center;
     -ms-flex-line-pack: center;
         align-content: center;
-    color: #38618c;
+    color: #ff5d73;
   }
-  .navbar #name-button {
-    font-size: 2rem;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  .navbar .name-button img {
+    height: 32px;
+    width: 32px;
+    margin: 10px;
   }
 }
 
@@ -135,54 +148,100 @@ section {
     float: none;
     display: block;
     text-align: left;
-    color: #38618c;
-  }
-  .navbar.responsive a:not(#name-button):not(.icon):hover {
-    background-color: #fb4d3d;
-    color: #fff;
+    color: #ff5d73;
   }
 }
 
 #intro {
-  font-size: 2rem;
   text-align: center;
   height: 100vh;
-  margin: 0;
+  background: #0a0a0a;
+  color: #fff;
 }
 
-.important-text {
-  color: #38618c;
+#intro .intro {
+  width: 80%;
 }
 
-.button {
-  background-color: #38618c;
-  border: solid;
-  border-color: #38618c;
+#intro .intro-text {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#intro .line {
+  margin: 20px auto;
+  padding-bottom: 30px;
+  border-top: 5px solid #ff5d73;
+  border-bottom: none;
+}
+
+#intro .important-text {
+  color: #ff5d73;
+}
+
+#intro .button {
+  margin: 20px;
+  background-color: #0a0a0a;
+  border: solid 3px #fff;
   color: #fff;
   padding: 15px;
-  font-family: "Poppins", sans-serif;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 1rem;
 }
 
-.button:hover {
-  background: #fb4d3d;
+#intro .button:hover {
+  background: #ff5d73;
   color: #fff;
-  border: solid #fb4d3d;
+  border: solid #ff5d73;
+}
+
+#intro .button:hover .arrow {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+}
+
+#intro .arrow {
+  margin-left: 10px;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 920px) {
+  #intro .intro-text {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+  #intro .line {
+    margin: 0 auto;
+    padding: 30px;
+    border-top: 5px solid #ff5d73;
+  }
+  #intro .button {
+    float: none;
+    margin: 10px;
+  }
 }
 
 #about {
   height: 100vh;
 }
 
-#about .headshot-image {
+#about .about img {
+  width: 100px;
+  height: aut;
+}
+
+#about .about .headshot-image {
   width: 100%;
   height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: center;
@@ -193,35 +252,35 @@ section {
 #about h1 {
   font-family: "Open Sans", sans-serif;
   font-size: 2.25rem;
-  color: #38618c;
+  color: black;
 }
 
 #about p {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   text-align: center;
-  width: 80%;
+  width: 50%;
+  color: black;
 }
 
 #about hr {
   border: 3px solid;
   width: 50%;
-  color: #fb4d3d;
+  color: #ff5d73;
 }
 
 #about .cta {
-  color: #38618c;
+  color: #0a0a0a;
   text-decoration: none;
 }
 
 #about .cta:hover {
-  color: #fb4d3d;
+  color: #ff5d73;
 }
 
 @media screen and (max-width: 920px) {
   #about h1 {
-    font-family: "Open Sans", sans-serif;
     font-size: 2rem;
-    color: #38618c;
+    color: #0a0a0a;
   }
   #about p {
     font-size: 1rem;
@@ -229,16 +288,10 @@ section {
   }
 }
 
-#work {
-  width: 80vw;
-  margin: 0 auto;
-  padding-top: 5vh;
-}
-
 #work h1 {
   font-family: "Open Sans", sans-serif;
   font-size: 2.25rem;
-  color: #38618c;
+  color: #0a0a0a;
   padding-top: 5vh;
 }
 
@@ -246,7 +299,7 @@ section {
   border: 3px solid;
   width: 50%;
   margin: 10px;
-  color: #fb4d3d;
+  color: #ff5d73;
 }
 
 #work .cards {
@@ -258,6 +311,8 @@ section {
   -ms-grid-rows: auto;
       grid-template-rows: auto;
   grid-gap: 1rem;
+  width: 50%;
+  height: 50%;
 }
 
 #work .card {
@@ -268,7 +323,7 @@ section {
 
 #work .card-heading {
   font-family: "Open Sans", sans-serif;
-  color: #fb4d3d;
+  color: #ff5d73;
 }
 
 #work .card-img {
@@ -287,11 +342,10 @@ section {
 }
 
 #work .card-button {
-  background-color: #38618c;
-  border: solid #38618c;
+  background-color: #0a0a0a;
+  border: solid #0a0a0a;
   color: #fff;
   padding: 5px;
-  font-family: "Poppins", sans-serif;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -300,8 +354,8 @@ section {
 }
 
 #work .card-button:hover {
-  background: #fb4d3d;
-  border: solid #fb4d3d;
+  background: #ff5d73;
+  border: solid #ff5d73;
 }
 
 /* Tablet Styles */
@@ -334,7 +388,7 @@ section {
 
 #contact h1 {
   font-family: "Open Sans", sans-serif;
-  color: #38618c;
+  color: #0a0a0a;
   font-size: 64px;
 }
 
@@ -342,7 +396,7 @@ section {
   border: 3px solid;
   width: 50%;
   margin: 10px;
-  color: #fb4d3d;
+  color: #ff5d73;
 }
 
 form {
@@ -353,7 +407,7 @@ form {
 form .form-controlcontact {
   width: 100%;
   border: none;
-  border-bottom: 2px #38618c;
+  border-bottom: 2px #0a0a0a;
   background: #d0d0d0;
   color: black;
   font-size: 16px;
@@ -363,26 +417,29 @@ form .form-controlcontact {
 
 form .form-controlcontact-submit {
   width: 100%;
-  background-color: #38618c;
+  background-color: #0a0a0a;
   color: #fff;
   font-size: 1rem;
-  font-family: "Poppins", sans-serif;
   border: solid;
-  border-color: #38618c;
+  border-color: #0a0a0a;
   padding: 20px;
   margin: 0 auto;
 }
 
 form .form-controlcontact-submit:hover {
   color: #fff;
-  background-color: #fb4d3d;
-  border: #fb4d3d solid;
+  background-color: #ff5d73;
+  border: #ff5d73 solid;
 }
 
 form textarea {
   resize: none;
   width: 100%;
   height: 200px;
+}
+
+form input {
+  border-radius: 5px;
 }
 
 .footer {
@@ -393,7 +450,6 @@ form textarea {
 }
 
 .footer-container {
-  font-family: "Poppins", sans-serif;
   margin: 0 auto;
   display: -ms-grid;
   display: grid;
@@ -448,22 +504,23 @@ form textarea {
   width: 60%;
   margin: 0 auto;
   height: 1px;
-  color: #fb4d3d;
+  color: #ff5d73;
   border: solid;
 }
 
 .footer-item3 .footer-icons {
   text-align: center;
+  padding-bottom: 5%;
 }
 
 .footer-item3 .fa-linkedin {
-  color: #fb4d3d;
+  color: #ff5d73;
   font-size: 2rem;
   text-align: center;
 }
 
 .footer-item3 .fa-dribbble-square {
-  color: #fb4d3d;
+  color: #ff5d73;
   font-size: 2rem;
   text-align: center;
 }
@@ -471,10 +528,11 @@ form textarea {
 @media screen and (max-width: 920px) {
   .footer-container {
     font-family: "Poppins", sans-serif;
+    background: #0a0a0a;
     margin: 0 auto;
     display: -ms-grid;
     display: grid;
-    max-width: 80%;
+    max-width: 100%;
     -ms-flex-line-pack: center;
         align-content: center;
     justify-items: center;
