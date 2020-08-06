@@ -1,9 +1,9 @@
 //------------------------------------------------------------------VARIABLES-------------------------------------------------
 
-$primary-color: #0a0a0a;
-$secondary-color: #ff5d73;
-$tertiary-color: #2c2c34;
-$accent-color: #ff5d73;
+$primary-color: #333333;
+$secondary-color: #0075F2;
+$tertiary-color: #f3f3f3;
+$accent-color: #F15025;
 $black: #000;
 $white: #fff;
 $heading-font: "Open Sans", sans-serif;
@@ -28,7 +28,7 @@ $content-font: "Poppins", sans-serif;
 }
 
 body {
-    background-color: #38618c;
+    background-color:$white;
     background-size: cover;
     background-position: center;
     font-family: Lato;
@@ -39,7 +39,8 @@ body {
 }
 
 .wrapper {
-    margin-top: 2.5em;
+  display: flex;
+    margin: 1em;
     width: 1000px;
     position: relative;
     top: 50%;
@@ -51,8 +52,8 @@ body {
 }
 
 .container{
+  position: relative;
     margin: 0 auto;
-    padding-bottom: 100px;
     width: 1000px;
  
 }
@@ -61,7 +62,7 @@ body {
     margin-top: 4.375em;
     color:white;
     justify-content: center;
-    font-size: ;
+    
 }
 
 /*************************************************
@@ -69,7 +70,7 @@ NavBar
 **********************************************/
 .navbar {
     position: fixed;
-    background-color: #f8f8f8;
+    background-color: transparent;
     overflow: hidden;
     top: 0;
     z-index: 1;
@@ -87,14 +88,12 @@ NavBar
       text-align: center;
       align-content: center;
       padding: 15px;
-      color: $primary-color;
+      color: $secondary-color;
       font-family: $content-font;
       text-decoration: none;
       font-size: 1.125rem;
     }
     .nav-link:hover {
-      background: $secondary-color;
-      color: $white;
       font-weight: bold;
     }
     .icon {
@@ -172,7 +171,7 @@ NavBar
     text-align: center;
     font-weight: 275;
     font-size: 80px;
-    color: #fb4d3d;
+    color: $secondary-color;
     margin-bottom: 130px;
 }
 
@@ -186,14 +185,14 @@ NavBar
     content: "\2022";
     font-size: 47px;
     position: absolute;
-    color: #fb4d3d;
+    color: $secondary-color;
     top: -7px;
     right: 10px;
     
 }
 
 .player-current-box {
-    background-color: #fb4d3d;
+    background-color: $primary-color;
     color: #fff;
     width: 40%;
     margin: 0 auto;
@@ -205,7 +204,7 @@ NavBar
     text-transform: uppercase;
     margin-bottom: 10px;
     font-size: 12px;
-    color: #222;
+    color: $secondary-color;
 }
 
 .player-current-score {
@@ -213,7 +212,7 @@ NavBar
 }
 
 button {
-    background-color: #38618c;
+    background-color: $primary-color;
     position: absolute;
     width: 200px;
     left: 50%;
@@ -230,7 +229,8 @@ button {
     transition: background-color 0.3s, color 0.3s;
 }
 
-button:hover { font-weight: 600; }
+button:hover { font-weight: 600; 
+background-color: $accent-color;}
 button:hover i { margin-right: 20px; }
 
 button:focus {
@@ -238,7 +238,7 @@ button:focus {
 }
 
 i {
-    color: #fb4d3d;
+    color: $secondary-color;
     display: inline-block;
     margin-right: 15px;
     font-size: 32px;
@@ -263,12 +263,12 @@ i {
 }
 
 .winner { background-color: #f7f7f7; }
-.winner .player-name { font-weight: bold; color: #fb4d3d; }
+.winner .player-name { font-weight: bold; color: $secondary-color; }
 .winner .player-score {
     text-align: center;
     font-weight: bolder;
     font-size: 80px;
-    color: #fb4d3d;
+    color: $secondary-color;
     margin-bottom: 130px;
 }
 
